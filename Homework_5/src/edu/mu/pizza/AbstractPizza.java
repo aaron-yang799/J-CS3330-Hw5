@@ -13,7 +13,7 @@ public abstract class AbstractPizza {
 	protected ICookingStrategy cookingStrategy;
 	protected double cookingPrice;
 	
-	protected static int orderIDCounter;
+	protected static int orderIDCounter = 0;
 
 	public AbstractPizza() {
 	}
@@ -26,6 +26,7 @@ public abstract class AbstractPizza {
 		this.pizzaOrderID = pizzaOrderID;
 		this.cookingStrategy = cookingStrategy;
 		this.cookingPrice = cookingPrice;
+		orderIDCounter++;
 	}
 
 	

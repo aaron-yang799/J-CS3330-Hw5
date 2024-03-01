@@ -22,6 +22,7 @@ public class VegatarianPizza extends AbstractPizza{
 		this.toppingsList.add(Toppings.BELL_PEPPER);
 		this.toppingsList.add(Toppings.BLACK_OLIVE);
 		this.toppingsList.add(Toppings.MUSHROOM);
+		this.priceWithoutToppings = 1.50;
 	}
 
 	@Override

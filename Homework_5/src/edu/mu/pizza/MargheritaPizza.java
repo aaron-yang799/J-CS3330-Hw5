@@ -17,6 +17,7 @@ public class MargheritaPizza extends AbstractPizza{
 		super(priceWithoutToppings, totalPrice, pizzaOrderID, cookingStrategy, cookingPrice);
 		this.toppingsList.add(Toppings.TOMATO);
 		this.toppingsList.add(Toppings.CHEESE);
+		this.priceWithoutToppings = 2.50;
 	}
 
 	@Override

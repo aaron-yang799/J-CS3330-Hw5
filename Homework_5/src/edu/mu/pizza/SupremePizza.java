@@ -25,6 +25,8 @@ public class SupremePizza extends AbstractPizza{
 		this.toppingsList.add(Toppings.PEPPERONI);
 		this.toppingsList.add(Toppings.BLACK_OLIVE);
 		this.toppingsList.add(Toppings.MUSHROOM);
+		this.priceWithoutToppings = 3.50;
+
 	}
 
 	@Override

@@ -9,7 +9,7 @@ public class HawaiianPizza extends AbstractPizza{
 		// TODO Auto-generated constructor stub
 	}
 
-	public HawaiianPizza(AbstractPizza abstractPizza) {
+	public HawaiianPizza(HawaiianPizza abstractPizza) {
 		super(abstractPizza);
 		// TODO Auto-generated constructor stub
 	}

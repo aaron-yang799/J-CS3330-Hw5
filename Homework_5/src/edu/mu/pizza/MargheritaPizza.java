@@ -8,7 +8,7 @@ public class MargheritaPizza extends AbstractPizza{
 		super();
 	}
 
-	public MargheritaPizza(AbstractPizza abstractPizza) {
+	public MargheritaPizza(MargheritaPizza abstractPizza) {
 		super(abstractPizza);
 	}
 	

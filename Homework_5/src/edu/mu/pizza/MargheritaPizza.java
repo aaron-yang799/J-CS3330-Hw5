@@ -15,6 +15,8 @@ public class MargheritaPizza extends AbstractPizza{
 	public MargheritaPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
 			ICookingStrategy cookingStrategy, double cookingPrice) {
 		super(priceWithoutToppings, totalPrice, pizzaOrderID, cookingStrategy, cookingPrice);
+		this.toppingsList.add(Toppings.TOMATO);
+		this.toppingsList.add(Toppings.CHEESE);
 	}
 
 	@Override

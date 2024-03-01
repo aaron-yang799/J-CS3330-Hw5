@@ -18,9 +18,9 @@ public abstract class AbstractPizza {
 	public AbstractPizza() {
 	}
 
-	public AbstractPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
+	public AbstractPizza(ArrayList<Toppings> toppings, double priceWithoutToppings, double totalPrice, int pizzaOrderID,
 			ICookingStrategy cookingStrategy, double cookingPrice) {
-		this.toppingsList = new ArrayList<Toppings>();
+		this.toppingsList = toppings;
 		this.priceWithoutToppings = priceWithoutToppings;
 		this.totalPrice = totalPrice;
 		this.pizzaOrderID = pizzaOrderID;

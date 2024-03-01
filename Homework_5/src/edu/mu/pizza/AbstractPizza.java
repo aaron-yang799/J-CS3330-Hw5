@@ -109,6 +109,14 @@ public abstract class AbstractPizza {
 	public void setToppingsList(List<Toppings> toppingsList) {
 		this.toppingsList = toppingsList;
 	}
+
+	@Override
+	public String toString() {
+		return "AbstractPizza [toppingsList=" + toppingsList + ", priceWithoutToppings=" + priceWithoutToppings
+				+ ", totalPrice=" + totalPrice + ", pizzaOrderID=" + pizzaOrderID + ", cookingStrategy="
+				+ cookingStrategy + ", cookingPrice=" + cookingPrice + ", getClass()=" + getClass() + "]";
+	}
+	
 	
 	
 }

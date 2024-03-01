@@ -1,5 +1,7 @@
 package edu.mu.pizza;
 
+import java.util.ArrayList;
+
 import edu.mu.cookingStrategy.ICookingStrategy;
 
 public class SupremePizza extends AbstractPizza{
@@ -14,9 +16,15 @@ public class SupremePizza extends AbstractPizza{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public SupremePizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
-			ICookingStrategy cookingStrategy, double cookingPrice) {
+	public SupremePizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID, ICookingStrategy cookingStrategy, double cookingPrice) {
 		super(priceWithoutToppings, totalPrice, pizzaOrderID, cookingStrategy, cookingPrice);
+		this.toppingsList.add(Toppings.TOMATO);
+		this.toppingsList.add(Toppings.CHEESE);
+		this.toppingsList.add(Toppings.BELL_PEPPER);
+		this.toppingsList.add(Toppings.ITALIAN_SAUSAGE);
+		this.toppingsList.add(Toppings.PEPPERONI);
+		this.toppingsList.add(Toppings.BLACK_OLIVE);
+		this.toppingsList.add(Toppings.MUSHROOM);
 	}
 
 	@Override

@@ -1,2 +1,2 @@
-# J-CS3330-Hw5
-CS_3330 Homework 5
+# Homework 5 - CMP_SCI 3330 SP24
+

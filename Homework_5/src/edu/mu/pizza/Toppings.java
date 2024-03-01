@@ -10,5 +10,24 @@ public enum Toppings {
 	BELL_PEPPER(1.00),
 	MUSHROOM(1.50),
 	CANADIAN_BACON(4.00);
+	
+	private double price;
+	
+	/*
+	 *Toppings enum private constructor
+	 *@param p
+	*/
+	private Toppings(double p) {
+		this.price = p;
+	}
 
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
 }

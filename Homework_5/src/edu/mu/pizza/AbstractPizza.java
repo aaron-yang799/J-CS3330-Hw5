@@ -17,7 +17,15 @@ public abstract class AbstractPizza {
 
 	public AbstractPizza() {
 	}
-
+	
+	/**
+	 * Constructor for AbstarctPizza
+	 * @param priceWithoutToppings
+	 * @param totalPrice
+	 * @param pizzaOrderID
+	 * @param cookingStrategy
+	 * @param cookingPrice
+	 */
 	public AbstractPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
 			ICookingStrategy cookingStrategy, double cookingPrice) {
 		this.toppingsList = new ArrayList<Toppings>();

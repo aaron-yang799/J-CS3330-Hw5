@@ -24,7 +24,7 @@ public class HawaiianPizza extends AbstractPizza{
 	}
 
 	@Override
-	protected double addRoppingsToPrice(double priceWithoutToppings) {
+	protected double addToppingsToPrice(double priceWithoutToppings) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

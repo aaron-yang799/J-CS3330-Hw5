@@ -2,19 +2,19 @@ package edu.mu.pizza;
 
 import edu.mu.cookingStrategy.ICookingStrategy;
 
-public class VegatarianPizza extends AbstractPizza{
+public class VegetarianPizza extends AbstractPizza{
 
-	public VegatarianPizza() {
+	public VegetarianPizza() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public VegatarianPizza(VegatarianPizza abstractPizza) {
+	public VegetarianPizza(VegetarianPizza abstractPizza) {
 		super(abstractPizza);
 		// TODO Auto-generated constructor stub
 	}
 
-	public VegatarianPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
+	public VegetarianPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
 			ICookingStrategy cookingStrategy, double cookingPrice) {
 		super(priceWithoutToppings, totalPrice, pizzaOrderID, cookingStrategy, cookingPrice);
 		this.toppingsList.add(Toppings.TOMATO);
@@ -26,7 +26,7 @@ public class VegatarianPizza extends AbstractPizza{
 	}
 
 	@Override
-	protected double addRoppingsToPrice(double priceWithoutToppings) {
+	protected double addToppingsToPrice(double priceWithoutToppings) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

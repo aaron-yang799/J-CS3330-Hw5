@@ -19,8 +19,8 @@ public class PizzaCookingFactory {
 			newSupreme.setPizzaOrderID(SupremePizza.getOrderIDCounter());
 			
 		case "VegetarianPizza":
-			VegatarianPizza newVegatarian = new VegatarianPizza();
-			newVegatarian.setPizzaOrderID(VegatarianPizza.getOrderIDCounter());
+			VegetarianPizza newVegatarian = new VegetarianPizza();
+			newVegatarian.setPizzaOrderID(VegetarianPizza.getOrderIDCounter());
 			
 		default:
 			break;

@@ -18,10 +18,11 @@ public class MargheritaPizza extends AbstractPizza{
 		this.toppingsList.add(Toppings.TOMATO);
 		this.toppingsList.add(Toppings.CHEESE);
 		this.priceWithoutToppings = 2.50;
+		
 	}
 
 	@Override
-	protected double addRoppingsToPrice(double priceWithoutToppings) {
+	protected double addToppingsToPrice(double priceWithoutToppings) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

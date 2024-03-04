@@ -19,7 +19,7 @@ public abstract class AbstractPizza {
 	}
 	
 	/**
-	 * Constructor for AbstarctPizza
+	 * Parameterized Constructor for AbstarctPizza
 	 * @param priceWithoutToppings
 	 * @param totalPrice
 	 * @param pizzaOrderID
@@ -47,7 +47,7 @@ public abstract class AbstractPizza {
 		this.cookingPrice = abstractPizza.cookingPrice;
 	}
 	
-	protected abstract double addRoppingsToPrice(double priceWithoutToppings);
+	protected abstract double addToppingsToPrice(double priceWithoutToppings);
 	
 	public abstract double updatePizzaPrice();
 	

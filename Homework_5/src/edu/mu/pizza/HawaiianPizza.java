@@ -14,9 +14,8 @@ public class HawaiianPizza extends AbstractPizza{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public HawaiianPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
-			ICookingStrategy cookingStrategy, double cookingPrice) {
-		super(priceWithoutToppings, totalPrice, pizzaOrderID, cookingStrategy, cookingPrice);
+	public HawaiianPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID) {
+		super(priceWithoutToppings, totalPrice, pizzaOrderID);
 		this.toppingsList.add(Toppings.CANADIAN_BACON);
 		this.toppingsList.add(Toppings.CHEESE);
 		this.toppingsList.add(Toppings.PINEAPPLE);

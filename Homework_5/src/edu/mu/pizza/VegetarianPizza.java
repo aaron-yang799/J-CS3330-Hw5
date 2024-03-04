@@ -14,9 +14,8 @@ public class VegetarianPizza extends AbstractPizza{
 		// TODO Auto-generated constructor stub
 	}
 
-	public VegetarianPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
-			ICookingStrategy cookingStrategy, double cookingPrice) {
-		super(priceWithoutToppings, totalPrice, pizzaOrderID, cookingStrategy, cookingPrice);
+	public VegetarianPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID) {
+		super(priceWithoutToppings, totalPrice, pizzaOrderID);
 		this.toppingsList.add(Toppings.TOMATO);
 		this.toppingsList.add(Toppings.CHEESE);
 		this.toppingsList.add(Toppings.BELL_PEPPER);

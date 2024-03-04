@@ -23,17 +23,12 @@ public abstract class AbstractPizza {
 	 * @param priceWithoutToppings
 	 * @param totalPrice
 	 * @param pizzaOrderID
-	 * @param cookingStrategy
-	 * @param cookingPrice
 	 */
-	public AbstractPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID,
-			ICookingStrategy cookingStrategy, double cookingPrice) {
+	public AbstractPizza(double priceWithoutToppings, double totalPrice, int pizzaOrderID) {
 		this.toppingsList = new ArrayList<Toppings>();
 		this.priceWithoutToppings = priceWithoutToppings;
 		this.totalPrice = totalPrice;
 		this.pizzaOrderID = pizzaOrderID;
-		this.cookingStrategy = cookingStrategy;
-		this.cookingPrice = cookingPrice;
 		orderIDCounter++;
 	}
 
@@ -43,8 +38,6 @@ public abstract class AbstractPizza {
 		this.priceWithoutToppings = abstractPizza.priceWithoutToppings;
 		this.totalPrice = abstractPizza.totalPrice;
 		this.pizzaOrderID = abstractPizza.pizzaOrderID;
-		this.cookingStrategy = abstractPizza.cookingStrategy;
-		this.cookingPrice = abstractPizza.cookingPrice;
 	}
 	
 	protected abstract double addToppingsToPrice(double priceWithoutToppings);

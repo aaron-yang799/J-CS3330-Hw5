@@ -9,18 +9,22 @@ public class PizzaCookingFactory {
 		case "HawaiianPizza":
 			HawaiianPizza newHawaiian = new HawaiianPizza();
 			newHawaiian.setPizzaOrderID(HawaiianPizza.getOrderIDCounter());
+			return newHawaiian;
 			
 		case "MargheritaPizza":
 			MargheritaPizza newMargherita = new MargheritaPizza();
 			newMargherita.setPizzaOrderID(MargheritaPizza.getOrderIDCounter());
+			return newMargherita;
 			
 		case "SupremePizza":
 			SupremePizza newSupreme = new SupremePizza();
 			newSupreme.setPizzaOrderID(SupremePizza.getOrderIDCounter());
+			return newSupreme;
 			
 		case "VegetarianPizza":
-			VegetarianPizza newVegatarian = new VegetarianPizza();
-			newVegatarian.setPizzaOrderID(VegetarianPizza.getOrderIDCounter());
+			VegetarianPizza newVegetarian = new VegetarianPizza();
+			newVegetarian.setPizzaOrderID(VegetarianPizza.getOrderIDCounter());
+			return newVegetarian;
 			
 		default:
 			break;

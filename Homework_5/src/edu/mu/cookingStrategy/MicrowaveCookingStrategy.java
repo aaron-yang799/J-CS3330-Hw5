@@ -6,8 +6,12 @@ public class MicrowaveCookingStrategy implements ICookingStrategy{
 
 	@Override
 	public boolean cook(AbstractPizza pizza) {
-		// TODO Auto-generated method stub
-		return false;
+		if(pizza == null) {
+			return false;
+		}
+		pizza.setCookingStrategy(this);
+		pizza.setCookingPrice(1.00);
+		pizza.setTotalPrice(pizza.getTotalPrice() + pizza.getCookingPrice());
+		return true;
 	}
-
 }

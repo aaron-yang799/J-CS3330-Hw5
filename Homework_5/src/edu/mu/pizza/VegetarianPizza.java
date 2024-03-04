@@ -27,14 +27,21 @@ public class VegetarianPizza extends AbstractPizza{
 
 	@Override
 	protected double addToppingsToPrice(double priceWithoutToppings) {
-		// TODO Auto-generated method stub
-		return 0;
+		this.priceWithoutToppings = priceWithoutToppings;
+		int totalToppingPrice = 0;
+		
+		for(Toppings topping: this.toppingsList) {
+			totalToppingPrice += topping.getPrice();
+		}
+		
+		this.totalPrice = totalToppingPrice + this.priceWithoutToppings;
+		return this.totalPrice;
 	}
 
 	@Override
 	public double updatePizzaPrice() {
-		// TODO Auto-generated method stub
-		return 0;
+		addToppingsToPrice(this.priceWithoutToppings);
+		return this.totalPrice;
 	}
 	
 }

@@ -59,6 +59,8 @@ public class PizzaOrder {
 	 * @param pizzaType
 	 * @return boolean
 	 */
+	
+	
 	public boolean addPizzaToCart(PizzaType pizzaType) {
 		AbstractPizza pizza = pizzaFactory.createPizza(pizzaType);
 		if(pizza == null) {
@@ -68,9 +70,55 @@ public class PizzaOrder {
 		return true;
 	}
 	
+	public AbstractPizza getPizzaByOrderID(int orderID) {
+		for(AbstractPizza pizza: pizzaOrderList) {
+			if(pizza.getPizzaOrderID() == orderID) {
+				return pizza;
+			}
+		}
+		return null;
+	}
 	
-	
-	
-	
+	public boolean addNewToppingToPizza(int orderID, Toppings topping) {
+		AbstractPizza pizza = getPizzaByOrderID(orderID);
+		if(pizza == null) {
+			System.out.println("Pizza with that ID not found");
+			return false;
+		}
+		
+		List<Toppings> toppings = pizza.getToppingsList();
+		for(int i = 0; i < toppings.size(); i++) {
+			if(toppings.get(i) == topping) {
+				System.out.println("The pizza already has " + topping);
+				return false;
+			}
+		}
+		pizza.toppingsList.add(topping);
+		return true;
+	}
+
+	public boolean RemoveToppingFromPizza(int orderID, Toppings topping) {
+		AbstractPizza pizza = getPizzaByOrderID(orderID);
+		if(pizza == null) {
+			System.out.println("Pizza with that ID not found");
+			return false;
+		}
+		
+		List<Toppings> toppings = pizza.getToppingsList();
+		int toppingIndex = -1;
+		for(int i = 0; i < toppings.size(); i++) {
+			if(toppings.get(i) == topping) {
+				toppingIndex = i;
+				break;
+			}
+		}
+		if(toppingIndex == -1) {
+			System.out.println(topping + "is not on the Pizza");
+			return false;
+		}
+		
+		pizza.toppingsList.remove(toppingIndex);
+		return true;
+	}
 	
 }

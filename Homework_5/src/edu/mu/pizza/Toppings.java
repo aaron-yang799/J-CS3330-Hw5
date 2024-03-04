@@ -22,7 +22,7 @@ public enum Toppings {
 	}
 
 	public double getPrice() {
-		return price;
+		return this.price;
 	}
 
 	public void setPrice(double price) {

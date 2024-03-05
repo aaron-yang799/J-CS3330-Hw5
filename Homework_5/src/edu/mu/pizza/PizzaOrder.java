@@ -82,13 +82,12 @@ public class PizzaOrder {
 	public boolean addNewToppingToPizza(int orderID, Toppings topping) {
 		AbstractPizza pizza = getPizzaByOrderID(orderID);
 		if(pizza == null) {
-			System.out.println("Pizza with that ID not found");
+			System.out.println("Pizza with ID" + orderID + "not found");
 			return false;
 		}
 		
-		List<Toppings> toppings = pizza.getToppingsList();
-		for(int i = 0; i < toppings.size(); i++) {
-			if(toppings.get(i) == topping) {
+		for(int i = 0; i < pizza.toppingsList.size(); i++) {
+			if(pizza.toppingsList.get(i) == topping) {
 				System.out.println("The pizza already has " + topping);
 				return false;
 			}
@@ -100,25 +99,18 @@ public class PizzaOrder {
 	public boolean RemoveToppingFromPizza(int orderID, Toppings topping) {
 		AbstractPizza pizza = getPizzaByOrderID(orderID);
 		if(pizza == null) {
-			System.out.println("Pizza with that ID not found");
+			System.out.println("Pizza with ID" + orderID + "not found");
 			return false;
 		}
 		
-		List<Toppings> toppings = pizza.getToppingsList();
-		int toppingIndex = -1;
-		for(int i = 0; i < toppings.size(); i++) {
-			if(toppings.get(i) == topping) {
-				toppingIndex = i;
-				break;
+		for(int i = 0; i < pizza.toppingsList.size(); i++) {
+			if(pizza.toppingsList.get(i) == topping) {
+				pizza.toppingsList.remove(i);
+				return true;
 			}
 		}
-		if(toppingIndex == -1) {
-			System.out.println(topping + "is not on the Pizza");
-			return false;
-		}
-		
-		pizza.toppingsList.remove(toppingIndex);
-		return true;
+		return false;
+	
 	}
 	
 }

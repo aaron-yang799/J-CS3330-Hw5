@@ -4,24 +4,24 @@ public class PizzaCookingFactory {
 	
 	public AbstractPizza createPizza(PizzaType pizzaType) {
 		
-		switch(pizzaType.getClass().getSimpleName()) {
+		switch(pizzaType) {
 		
-		case "HawaiianPizza":
+		case HAWAIIAN :
 			HawaiianPizza newHawaiian = new HawaiianPizza();
 			newHawaiian.setPizzaOrderID(HawaiianPizza.getOrderIDCounter());
 			return newHawaiian;
 			
-		case "MargheritaPizza":
+		case MARGHERITA:
 			MargheritaPizza newMargherita = new MargheritaPizza();
 			newMargherita.setPizzaOrderID(MargheritaPizza.getOrderIDCounter());
 			return newMargherita;
 			
-		case "SupremePizza":
+		case SUPREME:
 			SupremePizza newSupreme = new SupremePizza();
 			newSupreme.setPizzaOrderID(SupremePizza.getOrderIDCounter());
 			return newSupreme;
 			
-		case "VegetarianPizza":
+		case VEGETARIAN:
 			VegetarianPizza newVegetarian = new VegetarianPizza();
 			newVegetarian.setPizzaOrderID(VegetarianPizza.getOrderIDCounter());
 			return newVegetarian;

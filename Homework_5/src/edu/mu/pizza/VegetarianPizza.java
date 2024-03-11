@@ -40,6 +40,7 @@ public class VegetarianPizza extends AbstractPizza{
 	@Override
 	public double updatePizzaPrice() {
 		addToppingsToPrice(this.priceWithoutToppings);
+		this.totalPrice += this.cookingPrice;
 		return this.totalPrice;
 	}
 	

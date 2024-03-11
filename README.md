@@ -3,7 +3,12 @@ This project is a pizza online order system. It involves the strategy design pat
 
 ### Group Members
 - Aaron yang
-- Zach Snyder
+- Zach Snyder \
+  \
+  Wrote printPizzaOrderCart and printListOfToppingsByPizzaOrderID and addPizzaToCart and made changes to fix the constructos based off errors I encountered while writing my part. \
+  \
+  Also wrote the PizzaOrder constructor and printListOfToppingsByOrderId. 
+  
 - Viet Nguyen
 - Chetan Vanteddu
 
@@ -14,4 +19,6 @@ This project was developed using Java Dev Kit version 21. In order to run this c
 We have provided a test Main.java to perform many of the operations provided, however, if you would like to create your own main you can just create it within the package and use it instead.
 
 To run within any file just hit play!
+
+
 

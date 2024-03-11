@@ -47,9 +47,20 @@ public abstract class AbstractPizza {
 	}
 	
 //	Abstract method
+	/**
+	 * Calculates the total price of all toppings of the pizza, 
+	 * then adds that to the total price and returns the total price.
+	 * @param priceWithoutToppings
+	 * @return totalPrice
+	 */
 	protected abstract double addToppingsToPrice(double priceWithoutToppings);
 	
 //	Abstract method 
+	/**
+	 * Updates the totalPrice based on the priceWithoutToppings and
+	 * price of all toppings.
+	 * @return totalPrice
+	 */
 	public abstract double updatePizzaPrice();
 	
 //	Getters and setters

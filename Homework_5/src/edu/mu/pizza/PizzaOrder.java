@@ -56,7 +56,7 @@ public class PizzaOrder {
 				for(Toppings topping : pizza.getToppingsList()) {
 					System.out.println("\t\t" + topping + "\tPrice: $" + topping.getPrice());
 				}
-				System.out.println("\tTotal Cost: " + pizza.getTotalPrice() + "\n");
+				System.out.println("\tTotal Cost: " + pizza.updatePizzaPrice() + "\n");
 			}
 		}
 	}
@@ -109,7 +109,7 @@ public class PizzaOrder {
 		return true;
 	}
 
-	public boolean RemoveToppingFromPizza(int orderID, Toppings topping) {
+	public boolean removeToppingFromPizza(int orderID, Toppings topping) {
 		//find pizza we need to remove topping from using getPizzaByOrderID
 		AbstractPizza pizza = getPizzaByOrderID(orderID);
 		//if pizza does not exist, return false

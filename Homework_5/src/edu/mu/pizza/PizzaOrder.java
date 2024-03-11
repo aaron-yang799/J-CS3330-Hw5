@@ -48,16 +48,12 @@ public class PizzaOrder {
 	 * Prints all necessary information about pizzas with the given order ID
 	 */
 	public void printPizzaOrderCart(int orderID) {
-		int count = 0;
 		for(AbstractPizza pizza : pizzaOrderList) {
-			if(pizza.getPizzaOrderID() == orderID) {
-				++count;
-				System.out.println("Pizza #" + count + "\n\tType: " + pizza.getClass().getSimpleName() + "\tPrice Without Toppings: $" + pizza.getPriceWithoutToppings() + "\n\tToppings:");
-				for(Toppings topping : pizza.getToppingsList()) {
-					System.out.println("\t\t" + topping + "\tPrice: $" + topping.getPrice());
-				}
-				System.out.println("\tTotal Cost: " + pizza.updatePizzaPrice() + "\n");
+			System.out.println("Pizza #" + pizza.getPizzaOrderID() + "\n\tType: " + pizza.getClass().getSimpleName() + "\tPrice Without Toppings: $" + pizza.getPriceWithoutToppings() + "\n\tToppings:");
+			for(Toppings topping : pizza.getToppingsList()) {
+				System.out.println("\t\t" + topping + "\tPrice: $" + topping.getPrice());
 			}
+			System.out.println("\tTotal Cost: " + pizza.updatePizzaPrice() + "\n");
 		}
 	}
 	/**

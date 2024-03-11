@@ -5,6 +5,9 @@ import java.util.List;
 
 import edu.mu.cookingStrategy.ICookingStrategy;
 
+/**
+ * 
+ */
 public abstract class AbstractPizza {
 	protected List<Toppings> toppingsList;
 	protected double priceWithoutToppings;
@@ -32,7 +35,10 @@ public abstract class AbstractPizza {
 		orderIDCounter++;
 	}
 
-	
+	/**
+	 * Copy constructor for AbstractPizza
+	 * @param abstractPizza
+	 */
 	public AbstractPizza(AbstractPizza abstractPizza) {
 		this.toppingsList = new ArrayList<Toppings>(abstractPizza.toppingsList);
 		this.priceWithoutToppings = abstractPizza.priceWithoutToppings;
@@ -40,11 +46,13 @@ public abstract class AbstractPizza {
 		this.pizzaOrderID = abstractPizza.pizzaOrderID;
 	}
 	
+//	Abstract method
 	protected abstract double addToppingsToPrice(double priceWithoutToppings);
 	
+//	Abstract method 
 	public abstract double updatePizzaPrice();
 	
-	
+//	Getters and setters
 	public double getPriceWithoutToppings() {
 		return priceWithoutToppings;
 	}
@@ -112,6 +120,7 @@ public abstract class AbstractPizza {
 		this.toppingsList = toppingsList;
 	}
 
+//	toString
 	@Override
 	public String toString() {
 		return "AbstractPizza [toppingsList=" + toppingsList + ", priceWithoutToppings=" + priceWithoutToppings

@@ -1,9 +1,15 @@
 package edu.mu.pizza;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.mu.cookingStrategy.ConventionalOvenCookingStrategy;
+import edu.mu.cookingStrategy.BrickOvenCookingStrategy;
+import edu.mu.cookingStrategy.MicrowaveCookingStrategy;
+
 import edu.mu.cookingStrategy.ICookingStrategy;
+
 
 public class PizzaOrder {
 	
@@ -113,4 +119,67 @@ public class PizzaOrder {
 	
 	}
 	
+	public boolean isThereAnyUncookedPizza()
+	{
+		if(this.pizzaOrderList.isEmpty())
+		{
+			return false;
+		}
+		else
+		{
+			for(AbstractPizza p: pizzaOrderList)
+			{
+				if(p.getCookingStrategy() == null)
+				{
+					return true;
+				}
+			}
+		}
+		
+		return false;
+		
+	}
+	
+	public double checkout() throws Exception 
+	{
+        if (isThereAnyUncookedPizza()) {
+            throw new Exception("There are uncooked pizzas in the order. Please cook all pizzas before checkout.");
+        }
+        return 0.00;
+    }
+	
+	/*public boolean selectCookingStrategyByPizzaOrderID(int orderID, CookingStyleType cookingStrategyType)
+	{
+		
+		for(AbstractPizza)
+	}
+	*/
+	
+	public boolean selectCookingStrategyByPizzaOrderID(int orderID, CookingStyleType cookingStrategyType) {
+        for (AbstractPizza pizza : pizzaOrderList) {
+            if (pizza.getPizzaOrderID() == orderID) {
+                switch (cookingStrategyType) {
+                    case BRICK_OVEN:
+                    	new BrickOvenCookingStrategy().cook(pizza);
+                        break;
+                    case CONVENTIONAL_OVEN:
+                        new ConventionalOvenCookingStrategy().cook(pizza);
+                        break;
+                    case MICROWAVE:
+                        new MicrowaveCookingStrategy().cook(pizza);
+                        break;
+                    default:
+                        return false;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+	
+	
 }
+
+	
+

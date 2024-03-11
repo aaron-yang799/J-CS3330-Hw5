@@ -77,7 +77,9 @@ public class PizzaOrder {
 	}
 	
 	public AbstractPizza getPizzaByOrderID(int orderID) {
+		//traverse through all pizzas in pizzaOrderList
 		for(AbstractPizza pizza: pizzaOrderList) {
+			//return pizza if orderID of pizza in list matches orderID of query
 			if(pizza.getPizzaOrderID() == orderID) {
 				return pizza;
 			}
@@ -86,35 +88,45 @@ public class PizzaOrder {
 	}
 	
 	public boolean addNewToppingToPizza(int orderID, Toppings topping) {
+		//find pizza we need to add topping to using getPizzaByOrderID
 		AbstractPizza pizza = getPizzaByOrderID(orderID);
+		//if pizza does not exist, return false
 		if(pizza == null) {
 			System.out.println("Pizza with ID" + orderID + "not found");
 			return false;
 		}
 		
+		//traverse through toppingsList to check if pizza already has topping
 		for(int i = 0; i < pizza.toppingsList.size(); i++) {
+			//if pizza already has topping, return false
 			if(pizza.toppingsList.get(i) == topping) {
 				System.out.println("The pizza already has " + topping);
 				return false;
 			}
 		}
+		//if pizza does not have topping already, add topping and return true
 		pizza.toppingsList.add(topping);
 		return true;
 	}
 
 	public boolean RemoveToppingFromPizza(int orderID, Toppings topping) {
+		//find pizza we need to remove topping from using getPizzaByOrderID
 		AbstractPizza pizza = getPizzaByOrderID(orderID);
+		//if pizza does not exist, return false
 		if(pizza == null) {
 			System.out.println("Pizza with ID" + orderID + "not found");
 			return false;
 		}
 		
+		//traverse through toppingsList to check if pizza has topping we need to remove
 		for(int i = 0; i < pizza.toppingsList.size(); i++) {
+			//if topping matches the query, remove the topping
 			if(pizza.toppingsList.get(i) == topping) {
 				pizza.toppingsList.remove(i);
 				return true;
 			}
 		}
+		//return false if we could not find topping to remove
 		return false;
 	
 	}

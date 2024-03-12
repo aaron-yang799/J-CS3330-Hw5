@@ -56,13 +56,12 @@ public class PizzaOrder {
 			System.out.println("\tTotal Cost: " + pizza.updatePizzaPrice() + "\n");
 		}
 	}
+	
 	/**
 	 * Adds pizza to cart if it is returned as not null by the pizza factory.
 	 * @param pizzaType
 	 * @return boolean
 	 */
-	
-	
 	public boolean addPizzaToCart(PizzaType pizzaType) {
 		AbstractPizza pizza = pizzaFactory.createPizza(pizzaType);
 		if(pizza == null) {

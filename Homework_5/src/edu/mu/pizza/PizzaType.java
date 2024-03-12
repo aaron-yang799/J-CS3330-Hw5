@@ -12,6 +12,7 @@ public enum PizzaType {
 		this.toppingPrice = toppingPrice;
 	}
 
+//	Setters and getters
 	public double getToppingPrice() {
 		return toppingPrice;
 	}

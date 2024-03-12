@@ -22,6 +22,12 @@ public class HawaiianPizza extends AbstractPizza{
 		this.priceWithoutToppings = 3.00;
 	}
 
+	/**
+	 * Calculates the total price of all toppings of the pizza, 
+	 * then adds that to the total price and returns the total price.
+	 * @param priceWithoutToppings
+	 * @return totalPrice
+	 */
 	@Override
 	protected double addToppingsToPrice(double priceWithoutToppings) {
 		this.priceWithoutToppings = priceWithoutToppings;
@@ -35,6 +41,11 @@ public class HawaiianPizza extends AbstractPizza{
 		return this.totalPrice;
 	}
 
+	/**
+	 * Updates the totalPrice based on the priceWithoutToppings and
+	 * price of all toppings.
+	 * @return totalPrice
+	 */
 	@Override
 	public double updatePizzaPrice() {
 		addToppingsToPrice(this.priceWithoutToppings);

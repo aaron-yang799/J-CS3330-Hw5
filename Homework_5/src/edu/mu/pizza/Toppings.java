@@ -13,7 +13,7 @@ public enum Toppings {
 	
 	private double price;
 	
-	/*
+	/**
 	 *Toppings enum private constructor
 	 *@param p
 	*/
@@ -21,6 +21,7 @@ public enum Toppings {
 		this.price = p;
 	}
 
+//	Setters and getters
 	public double getPrice() {
 		return this.price;
 	}

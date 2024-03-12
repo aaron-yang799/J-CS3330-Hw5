@@ -22,8 +22,16 @@ To run within any file just hit play!
 
 ### Contributions
 - Aaron Yang
+  - Created intial classes, ENUMs, and interfaces as well as the attributes and method sigantures for these as well. As well as getters and setters.
+  - Intial paramterized and copy construictors for the Pizza types, also made modifications to them aswell.
+  - Created the toString() for AbstractPizza.
+  - Created implementations for the below methods:
+    - public boolean cook(AbstractPizza pizza), for each startegy of ICoookingStrategy.
+    - protected abstract double addToppingsToPrice(double priceWithoutToppings), for each Pizza type.
+    - public abstract double updatePizzaPrice(), for each Pizza type.
+    - 
 - Zach Snyder
-  - Wrote printPizzaOrderCart and printListOfToppingsByPizzaOrderID and addPizzaToCart and made changes to fix the constructos based off errors I encountered while writing my part.
+  - Wrote printPizzaOrderCart and printListOfToppingsByPizzaOrderID and addPizzaToCart and made changes to fix the constructors based off errors I encountered while writing my part.
   - Also wrote the PizzaOrder constructor and printListOfToppingsByOrderId. 
 - Viet Nguyen
 - Chetan Vanteddu

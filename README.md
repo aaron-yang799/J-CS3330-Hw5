@@ -33,6 +33,6 @@ To run within any file just hit play!
   - Created and implemented the following methods:
     - `public boolean isThereAnyUncookedPizza()`
     - `public double checkout() throws Exception`
-      - Adjustments were made further down the project timline to properly calculate the total price of the pizzas ( 
+      - Adjustments were made further down the project timline to properly calculate the total price of the pizzas in the cart, which is returned as a double.
     - `public boolean selectCookingStrategyByPizzaOrderID(int orderID,CookingStyleType cookingStrategyType)`
   - Implemented the ICookingStrategy interface with the `selectCookingStrategyByPizzaOrderID` method

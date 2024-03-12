@@ -21,13 +21,18 @@ To run within any file just hit play!
   - Intial paramterized and copy construictors for the Pizza types, also made modifications to them aswell.
   - Created the toString() for AbstractPizza.
   - Created implementations for the below methods:
-    - public boolean cook(AbstractPizza pizza), for each startegy of ICoookingStrategy.
-    - protected abstract double addToppingsToPrice(double priceWithoutToppings), for each Pizza type.
-    - public abstract double updatePizzaPrice(), for each Pizza type.
+    - `public boolean cook(AbstractPizza pizza)`, for each startegy of ICoookingStrategy.
+    - `protected abstract double addToppingsToPrice(double priceWithoutToppings)`, for each Pizza type.
+    - `public abstract double updatePizzaPrice()`, for each Pizza type.
 - Zach Snyder
-  - Wrote printPizzaOrderCart and printListOfToppingsByPizzaOrderID and addPizzaToCart and made changes to fix the constructors based off errors I encountered while writing my part.
-  - Also wrote the PizzaOrder constructor and printListOfToppingsByOrderId. 
+  - Wrote `printPizzaOrderCart` and `printListOfToppingsByPizzaOrderID` and `addPizzaToCart` and made changes to fix the constructors based off errors I encountered while writing my part.
+  - Also wrote the `PizzaOrder constructor` and `printListOfToppingsByOrderId`. 
 - Viet Nguyen
-  - To be done
+  - To be do
 - Chetan Vanteddu
-  - To be done
+  - Created and implemented the following methods:
+    - `public boolean isThereAnyUncookedPizza()`
+    - `public double checkout() throws Exception`
+      - Adjustments were made further down the project timline to properly calculate the total price of the pizzas ( 
+    - `public boolean selectCookingStrategyByPizzaOrderID(int orderID,CookingStyleType cookingStrategyType)`
+  - Implemented the ICookingStrategy interface with the `selectCookingStrategyByPizzaOrderID` method

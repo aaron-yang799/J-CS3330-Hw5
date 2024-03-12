@@ -24,7 +24,7 @@ To run within any file just hit play!
 - Aaron Yang
 - Zach Snyder
   - Wrote printPizzaOrderCart and printListOfToppingsByPizzaOrderID and addPizzaToCart and made changes to fix the constructos based off errors I encountered while writing my part.
-  Also wrote the PizzaOrder constructor and printListOfToppingsByOrderId. 
+  - Also wrote the PizzaOrder constructor and printListOfToppingsByOrderId. 
 - Viet Nguyen
 - Chetan Vanteddu
 

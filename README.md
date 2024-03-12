@@ -29,10 +29,10 @@ To run within any file just hit play!
     - public boolean cook(AbstractPizza pizza), for each startegy of ICoookingStrategy.
     - protected abstract double addToppingsToPrice(double priceWithoutToppings), for each Pizza type.
     - public abstract double updatePizzaPrice(), for each Pizza type.
-    - 
 - Zach Snyder
   - Wrote printPizzaOrderCart and printListOfToppingsByPizzaOrderID and addPizzaToCart and made changes to fix the constructors based off errors I encountered while writing my part.
   - Also wrote the PizzaOrder constructor and printListOfToppingsByOrderId. 
 - Viet Nguyen
+  - To be done
 - Chetan Vanteddu
-
+  - To be done

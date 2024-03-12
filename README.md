@@ -20,5 +20,10 @@ We have provided a test Main.java to perform many of the operations provided, ho
 
 To run within any file just hit play!
 
-
+### Contributions
+- Aaron Yang
+- Zach Snyder
+  - 
+- Viet Nguyen
+- Chetan Vanteddu
 

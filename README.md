@@ -3,12 +3,7 @@ This project is a pizza online order system. It involves the strategy design pat
 
 ### Group Members
 - Aaron yang
-- Zach Snyder \
-  \
-  Wrote printPizzaOrderCart and printListOfToppingsByPizzaOrderID and addPizzaToCart and made changes to fix the constructos based off errors I encountered while writing my part. \
-  \
-  Also wrote the PizzaOrder constructor and printListOfToppingsByOrderId. 
-  
+- Zach Snyder
 - Viet Nguyen
 - Chetan Vanteddu
 

@@ -28,7 +28,9 @@ To run within any file just hit play!
   - Wrote `printPizzaOrderCart` and `printListOfToppingsByPizzaOrderID` and `addPizzaToCart` and made changes to fix the constructors based off errors I encountered while writing my part.
   - Also wrote the `PizzaOrder constructor` and `printListOfToppingsByOrderId`. 
 - Viet Nguyen
-  - To be do
+  - Created `createPizza` method in `PizzaCookingFactory`
+      - Changed to initiate pizza objects with parameterized constructors during testing to correctly initiate pizza objects
+  - Created `getPizzaByOrderID`, `removeToppingFromPizza`, and `addNewToppingToPizza` methods
 - Chetan Vanteddu
   - Created and implemented the following methods:
     - `public boolean isThereAnyUncookedPizza()`
